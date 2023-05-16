@@ -27,7 +27,7 @@ export default function Login() {
 
     axios({
       method: "post",
-      url: "http://localhost:5000/login",
+      url: "/api/login",
       data: {
         user: data.get("email"),
         password: data.get("password"),

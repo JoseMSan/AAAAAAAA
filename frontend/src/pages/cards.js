@@ -42,7 +42,7 @@ export default function Cards() {
   React.useEffect(() => {
     axios({
       method: "get",
-      url: `http://localhost:5000/${user}/cards`,
+      url: `/api/${user}/cards`,
     }).then((response) => {
       setCardList(response.data);
     });
@@ -93,7 +93,7 @@ export default function Cards() {
 
     axios({
       method: "post",
-      url: `http://localhost:5000/${user}/cards`,
+      url: `/api/${user}/cards`,
       data: cromo,
     }).then((response) => {
       setCardList([...cardList, response.data]);
@@ -103,7 +103,7 @@ export default function Cards() {
   function eliminar(id) {
     axios({
       method: "delete",
-      url: `http://localhost:5000/${user}/cards/${id}`,
+      url: `/api/${user}/cards/${id}`,
     }).then((response) => {
       showDelet(true);
     });
@@ -125,7 +125,7 @@ export default function Cards() {
 
     axios({
       method: "put",
-      url: `http://localhost:5000/${user}/cards/${params.id}`,
+      url: `/api/${user}/cards/${params.id}`,
       data: cromo
     }).then((response) => {
       showEditCheck(true);
