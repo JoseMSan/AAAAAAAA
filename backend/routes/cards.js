@@ -1,10 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-var data = require("../data");
-var cardsData = data.users;
-var indexOfUser = data.indexOfUser;
-var indexofCard = data.indexOfCard;
 
 const User = require("../models/User");
 const Card = require("../models/Card");

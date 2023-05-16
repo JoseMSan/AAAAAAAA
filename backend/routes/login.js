@@ -3,10 +3,6 @@ const router = express.Router();
 
 const User = require("../models/User");
 
-var data = require("../data");
-var cardsData = data.users;
-var indexOfUser = data.indexOfUser;
-
 router.post("/", async function (req, res) {
   let userFound = await User.findOne({user: req.body.user})
 
